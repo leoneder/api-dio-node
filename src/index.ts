@@ -1,23 +1,17 @@
 import express, { Request, Response } from 'express';
+var bodyParser = require('body-parser')
+import { router } from './routes';
 const server = express();
-const usuario = {
-    nome: "leo",
-    id:5 
-};
 
+
+server.use(bodyParser.json())
+server.use(router);
+server.use(express.json());
 
 server.listen(8080, () => {
     console.log("servidor subiu");
 })
 
-server.get('/users', (request: Request, response: Response)=>{
-    return response.json ({usuario});
-})
-
-
-server.get('/ini', (request: Request, response: Response)=>{
-    return response.json({mensagem: "server on!" });
-}) 
 
 
 
