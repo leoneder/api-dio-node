@@ -1,6 +1,13 @@
+
+import'reflect-metadata';
 import express, { Request, Response } from 'express';
+import { createConnection } from 'typeorm';
+
+
 var bodyParser = require('body-parser')
 import { router } from './routes';
+
+createConnection();
 const server = express();
 
 
