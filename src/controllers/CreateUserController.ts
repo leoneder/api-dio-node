@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { CreateUserService } from "../../CreateUserService";
+import { CreateUserService } from "../services/CreateUserService";
 class CreateUserController{
     handle(request: Request, response: Response) {
         const nome = request.body.nome;
