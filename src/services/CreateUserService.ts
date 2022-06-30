@@ -1,8 +1,10 @@
 import { AppDataSource } from "../data-source"
 import { Usuario } from "../entity/Usuario";
 interface IUsuario{
+    
     nome: string,
     email?: string
+    
 }
 
 class CreateUserService {
@@ -14,13 +16,15 @@ class CreateUserService {
         .into(Usuario)
         .values([
         {
+    
           nome: nome,
-          email: email
+          email: email,
+          
         },
         
     ])
     .execute()
-        return usuario;
+        return usuario.identifiers[0];
         
         
     }
