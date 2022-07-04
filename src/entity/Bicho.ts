@@ -13,9 +13,27 @@ export class User {
     cor: string
 
     @Column()
-    raça: number
+    raça: string
 
     @Column()
-    porte: number
+    porte: string
+
+    @Column()
+    endereço: string
+
+    @Column()
+    detalhes: string
+
+    @Column()
+    dataVisto: string
+
+    @Column()
+    dataCadastro: string
+
+    @Column()
+    cliente: string
+
+    @Column()
+    imagem: string
 
 }
